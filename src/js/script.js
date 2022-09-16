@@ -1,14 +1,26 @@
 import * as myAnimations from "./animations";
 
+//INIT
+//animation elements
 const burgerImage = document.querySelector(".js-burger-images");
 const burgerImages = document.querySelectorAll(".js-burger-images > *");
-
 const backgroundGraphic = document.querySelector(".js-graphics-bg");
 const buttonCTA = document.querySelector(".js-CTA");
-
 const textElements = document.querySelector(".js-text-elements");
 const textNodes = document.querySelectorAll(".js-text-elements > *");
 
+//input fields
+const headlineTextField = document.querySelectorAll(".js-headline-text")[0];
+const colorButtons = document.querySelectorAll(".js-color-buttons > *");
+const form = document.querySelector(".input").addEventListener("click", (e) => {
+  e.preventDefault();
+});
+const imageSizeRange = document.querySelector(".js-image-size-range");
+
+//play again button
+const playAgainBtn = document.querySelector(".js-play-again-button");
+
+//ANIMATION
 const prepareSecondFrame = () => {
   textNodes[0].innerHTML = "And side dishes delivered to your doorstep";
 
@@ -61,15 +73,7 @@ const playAnimation = (isSecondFrame) => {
 
 playAnimation();
 
-//// INPUT JAVASCRIPT
-const headlineTextField = document.querySelectorAll(".js-headline-text")[0];
-const colorButtons = document.querySelectorAll(".js-color-buttons > *");
-const form = document.querySelector(".input").addEventListener("click", (e) => {
-  e.preventDefault();
-});
-
-const imageSizeRange = document.querySelector(".js-image-size-range");
-
+// INPUT  CONTROLS
 headlineTextField.addEventListener("input", (event) => {
   textNodes[0].innerHTML = event.target.value;
 });
@@ -90,9 +94,7 @@ imageSizeRange.addEventListener("input", (e) => {
   });
 });
 
-/// PLAY AGAIN
-const playAgainBtn = document.querySelector(".js-play-again-button");
-
+// PLAY AGAIN
 const prepAnimation = () => {
   burgerImages.forEach((burger, i) => {
     i == 0 ? (burger.style.display = "block") : (burger.style.display = "none");
