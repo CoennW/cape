@@ -13,6 +13,10 @@ Download or clone the files and install/run the app with npm
   npm run start
 ```
 
+## Bugs 
+
+- The image will render behind the background graphic. After research I did not manage to find a solution. Transform does something with z-index that I don't understand. Probably related with: https://stackoverflow.com/questions/20851452/z-index-is-canceled-by-setting-transformrotate.
+
 ## Live demo
 
 https://coenwalter.nl/cape/    
