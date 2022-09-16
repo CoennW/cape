@@ -1,0 +1,113 @@
+.wrapper {
+  display: flex;
+  gap: 25px;
+}
+
+.preview {
+  width: 840px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.preview__info {
+  border: 1px solid lightgray;
+  display: flex;
+  justify-content: space-between;
+}
+
+.preview__iframe {
+  overflow: hidden;
+  position: relative;
+  width: calc(1200 * 0.7);
+  height: calc(628 * 0.7);
+  background-color: orange;
+  padding: 0.05px; //hacky way for no vertical margin collapse find better solution
+}
+
+.preview__iframe:hover {
+  .preview__iframe--hover {
+    transform: scale(1.1);
+    transition: 1s;
+    z-index: 100;
+  }
+}
+
+.iframe__text {
+  margin: 50px 0 0 20px;
+}
+
+.iframe__header {
+  color: white;
+  width: 300px;
+  line-height: 1.2em;
+  height: calc(3 * 1.2em); //maximum of three lines
+}
+
+.iframe__CTA {
+  font-size: 1.1em;
+  font-weight: bold;
+  border: none;
+  color: white;
+  background-color: blue;
+  padding: 0.8em 2em;
+  border-radius: 50px;
+}
+
+.iframe__image {
+  position: relative;
+  left: 150;
+  bottom: 220;
+  width: 67%;
+  z-index: 5;
+}
+
+.iframe__image--2 {
+  position: relative;
+  display: none;
+}
+
+.iframe__logo {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 40%;
+}
+
+.iframe__graphics {
+  overflow: hidden;
+  width: 110%;
+  height: 300px;
+  position: absolute;
+  bottom: -120;
+  left: -30;
+  transform: rotate(-10deg);
+}
+
+.iframe__graphics__1 {
+  position: absolute;
+  background-color: rgb(240, 240, 240);
+  height: 300px;
+  width: 150%;
+  bottom: 0;
+}
+
+.iframe__graphics__2 {
+  position: absolute;
+  background-color: lightcoral;
+  width: 400px;
+  height: 90px;
+  right: -30;
+  top: -50;
+  transform: rotate(15deg);
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.input > * {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

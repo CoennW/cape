@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="src/scss/style.scss">
+    <script type="module" src="src/js/script.js"></script>
+
+    <title>Cape assessment</title>
+
+</head>
+<body>
+    <div class="wrapper">
+        <div class="preview">
+            <div class="preview__info">
+                <p>1200x675 (70%)</p>
+                <button class="js-play-again-button">Play again</button>
+            </div>
+            <div class="preview__iframe">
+                <div class="iframe__text js-text-elements">
+                    <h1 class="iframe__header">Burger with cheese</h1>
+                    <button class="iframe__CTA js-CTA">Order now!</button>
+                </div>
+                <div class="js-burger-images">
+                    <img class="iframe__image js-burger-image" src="src/img/burger1.png" alt="Burger with cheese">
+                    <img class="iframe__image iframe__image--2 js-burger-image2" src="src/img/burger2.png" alt="Burger with cheese">
+                </div>
+                <img class="iframe__logo" src="src/img/logo_takeaway.svg" alt="Logo of the company: takeaway">
+                <div class="js-graphics-bg">
+                    <div class="iframe__graphics">
+                        <div class="iframe__graphics__1"></div>
+                        <div class="iframe__graphics__2"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form class="input">
+            <div>
+                <label for="headline">headline</label>
+                <input type="text" class="js-headline-text" id="headline">
+            </div>
+            <div>
+                <label for="headlineColor">headline color</label>
+                <div id="headlineColor" class="js-color-buttons">
+                    <button value="#fff">white</button>
+                    <button value="#000">black</button>
+                </div>
+            </div>
+            <div>
+                <label for="imageSize">image size</label>
+                <input class="js-image-size-range" type="range" id="imageSize" name="imageSize" min="0" max="100">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
