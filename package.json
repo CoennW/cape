@@ -2,7 +2,6 @@
   "name": "cape-assessment-coen",
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
   "source": "index.html",
   "scripts": {
     "start": "parcel",
