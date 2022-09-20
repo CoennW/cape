@@ -30,6 +30,7 @@ const prepareSecondFrame = () => {
   playAnimation(true);
 };
 
+//The animations that are played on refresh
 const playAnimation = (isSecondFrame) => {
   backgroundGraphic.animate(
     myAnimations.slideInFromBottom,
@@ -74,20 +75,24 @@ const playAnimation = (isSecondFrame) => {
 playAnimation();
 
 // INPUT  CONTROLS
+//Changes the header text
 headlineTextField.addEventListener("input", (event) => {
   textNodes[0].innerHTML = event.target.value;
 });
 
+//Add eventlisteners for header color change
 colorButtons.forEach((button) => {
   button.addEventListener("click", () => {
     handleColorChange(button.value);
   });
 });
 
+//Logic for header color change
 const handleColorChange = (color) => {
   textNodes[0].style.color = color;
 };
 
+//Uses the slider to change the picture size
 imageSizeRange.addEventListener("input", (e) => {
   burgerImages.forEach((image) => {
     image.style.width = e.target.value + "%";
@@ -95,6 +100,7 @@ imageSizeRange.addEventListener("input", (e) => {
 });
 
 // PLAY AGAIN
+//Play again button resets all the timeouts and fires the animation
 const prepAnimation = () => {
   burgerImages.forEach((burger, i) => {
     i == 0 ? (burger.style.display = "block") : (burger.style.display = "none");
